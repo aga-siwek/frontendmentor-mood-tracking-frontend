@@ -9,11 +9,12 @@ Application in React (created in Vite) for:
 Git clone
 
 ```bash
-git clone https://github.com/aga-siwek/frontendmentor-character-count-app
+git clone https://github.com/aga-siwek/frontendmentor-mood-tracking-frontend.git
+
 ```
 Navigate to project dictionary
 ```bash
-cd character-counter-app
+cd mood-tracking
 ```
 Make sure that you have a Node.js
 ```node -v```

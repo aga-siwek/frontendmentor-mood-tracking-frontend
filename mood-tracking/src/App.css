@@ -1,1 +1,11 @@
-
+:root {
+    background: linear-gradient(#F5F5FF, #E0E0FF) fixed;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(32rem/16);
+    align-items: center;
+    justify-content: center;
+    padding: calc(80rem/16) calc(16rem/16);
+}

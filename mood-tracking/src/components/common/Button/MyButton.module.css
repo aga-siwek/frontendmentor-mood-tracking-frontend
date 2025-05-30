@@ -1,0 +1,11 @@
+.button {
+    background-color: #4865DB;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-size: calc(20rem / 16);
+    font-weight: bold;
+    line-height: 140%;
+    border: 0;
+    padding: calc(12rem / 16) calc(32rem / 16);
+
+}
