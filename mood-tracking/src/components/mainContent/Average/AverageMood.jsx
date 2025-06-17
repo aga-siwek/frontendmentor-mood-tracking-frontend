@@ -29,30 +29,26 @@ function AverageMood({averageMood, prevAverageMood}) {
     const feelSwitch = () => {
         switch (averageMood) {
             case 2:
-                return "Very Happy"
+                return <p className={styles.card_header_text}>Very Happy</p>
             case 1:
-                return "Happy"
+                return <p className={styles.card_header_text}>Happy</p>
             case 0:
-                return "Neutral"
+                return <p className={styles.card_header_text}>Neutral</p>
             case -1:
-                return "Sad"
+                return <p className={styles.card_header_text}>Sad</p>
             case -2:
-                return "Very Sad"
+                return <p className={styles.card_header_text}>Very Sad</p>
         }
     }
 
     const feelIconChange = () => {
         if (averageMood > prevAverageMood) {
-            return <ReactSVG src={increaseIcon} alt="increase trends icon"/>
-        }
-        else if (averageMood === prevAverageMood) {
-            return <ReactSVG src={equalIcon} alt="equal trends icon"/>
-        }
-
-        else if (averageMood < prevAverageMood) {
-            return <ReactSVG src={decreaseIcon} alt="decrease trends icon"/>
-        }
-        else {
+            return <ReactSVG src={increaseIcon} alt="increase trends icon" className={styles.card_body_icon_svg}/>
+        } else if (averageMood === prevAverageMood) {
+            return <ReactSVG src={equalIcon} alt="equal trends icon" className={styles.card_body_icon_svg}/>
+        } else if (averageMood < prevAverageMood) {
+            return <ReactSVG src={decreaseIcon} alt="decrease trends icon" className={styles.card_body_icon_svg}/>
+        } else {
             return <div>lack of data</div>
         }
 
@@ -60,17 +56,13 @@ function AverageMood({averageMood, prevAverageMood}) {
 
     const feelTextChange = () => {
         if (averageMood > prevAverageMood) {
-            return <div>increase</div>
-        }
-        else if (averageMood === prevAverageMood) {
-            return <div>equel</div>
-        }
-
-        else if (averageMood < prevAverageMood) {
-            return <div>decrease</div>
-        }
-        else {
-            return <div>lack of data</div>
+            return <p className={styles.card_body_text}>Increase from the previous 5 check-ins</p>
+        } else if (averageMood === prevAverageMood) {
+            return <p className={styles.card_body_text}>Same as the previous 5 check-ins</p>
+        } else if (averageMood < prevAverageMood) {
+            return <p className={styles.card_body_text}>Decrease from the previous 5 check-ins</p>
+        } else {
+            return <p className={styles.card_body_text}>lack of data</p>
         }
 
     }
@@ -82,20 +74,13 @@ function AverageMood({averageMood, prevAverageMood}) {
                 <p className={styles.header_text_ext}>(Last 5 check-ins)</p>
             </div>
             <div className={styles.card}>
-                <div>
-                    <div className={styles.card_header}>
-                        <div className={styles.card_header_icon}>
-                            {iconSwitch()}
-                        </div>
-                        <div className={styles.card_header_text}>
-                            {feelSwitch()}
-                        </div>
-                        <div className={styles.card_body}>
-                            <div className={styles.card_body_icon}></div>
-                            <div className={styles.card_body_text}></div>
-                        </div>
-                        <div></div>
-                    </div>
+                <div className={styles.card_header}>
+                    {iconSwitch()}
+                    {feelSwitch()}
+                </div>
+                <div className={styles.card_body}>
+                    {feelIconChange()}
+                    {feelTextChange()}
                 </div>
             </div>
         </div>

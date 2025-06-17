@@ -15,18 +15,18 @@ function App() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [userName, setUserName] = useState("");
+    const [mood, setMood] = useState(-2);
     const [feels, setFeels] = useState([
         "Excited",
         "Overwhelmaed"
     ]);
-    const [mood, setMood] = useState(-2);
+    const [description, setDescription] = useState("");
+    const [sleepTime, setSleepTime] = useState(0);
     const [averageMood, setAverageMood] = useState(0);
     const [prevAverageMood, setPrevAverageMood] = useState(0);
-    const [description, setDescription] = useState("");
-    const [sleepTime, setSleepTime] = useState("+9 hours");
-    const [averageSleepTime, setAverageSleepTime] = useState("+9 hours");
-    const [prevAverageSleepTime, setPrevAverageSleepTime] = useState(0);
-    const [sentence, setSentence] = useState("");
+    const [averageSleepTime, setAverageSleepTime] = useState(1);
+    const [prevAverageSleepTime, setPrevAverageSleepTime] = useState(2);
+    const [logsData, setLogsData] = useState([]);
 
     const handleDataChange = ({email, password}) => {
         setEmail(email)

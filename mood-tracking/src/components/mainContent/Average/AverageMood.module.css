@@ -1,8 +1,9 @@
 .average_mood {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
+    gap: calc(12rem/16);
     width: 100%;
 }
 .header {
@@ -26,15 +27,63 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    gap: calc(12rem/16);
+    justify-content: start;
+    align-items: start;
     background-color: #89CAFF;
     border-radius: 20px;
-    padding: calc(20rem / 16) calc(16rem / 16);
+    padding: calc(42rem / 16) calc(16rem / 16);
     height: calc(150rem/16);
     width: 100%;
+    background-image: url("../../../assets/bg-pattern-averages.svg");
+    background-repeat: no-repeat;
+    background-position: +350%;
+}
+
+.card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: calc(12rem/16);
+}
+
+.card_header_text {
+    color: #21214D;
+    font-weight: 600;
+    font-size: calc(24rem / 16);
+    line-height: 140%;
+
+}
+
+.card_body {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: calc(8rem/16);
 }
 .card_body_icon {}
 .feeling_icon_svg {
     width: 24px;
     height: 24px;
+
 }
-.card_body_text {}
+
+.card_body_icon_svg {
+    width: 15px;
+    height: 15px;
+    fill: #21214D;
+}
+
+.card_body_text {
+    color: #21214D;
+    font-size: calc(15rem / 16);
+    letter-spacing: -0.3px;
+    line-height: 140%;
+    font-weight: normal;
+}
+
+
