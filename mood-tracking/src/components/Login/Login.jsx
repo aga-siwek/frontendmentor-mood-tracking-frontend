@@ -33,9 +33,9 @@ function Login({email, password, handleDataChange}) {
                 </div>
                 <MyForm formType="login" email={email} password={password} handleDataChange={handleDataChange}/>
             </div>
-            <div className={styles.login_form_switch}>
-                Haven't got an account? <a href="/signup">Sign up </a>.
-            </div>
+            {/*<div className={styles.login_form_switch}>*/}
+            {/*    Haven't got an account? <a href="/sign-up">Sign up </a>.*/}
+            {/*</div>*/}
         </div>
     )
 }

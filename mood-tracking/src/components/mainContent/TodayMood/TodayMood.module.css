@@ -1,0 +1,8 @@
+.today_mood {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(20rem/16);
+    width: 100%;
+}

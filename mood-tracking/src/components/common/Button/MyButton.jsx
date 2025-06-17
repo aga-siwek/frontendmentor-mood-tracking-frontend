@@ -10,7 +10,11 @@ function MyButton({formType = "general", size="big"}) {
         return (
             <button type="submit" className={`${styles.button} ${styles[size]}`}>Sign Up</button>
         )
-    } else {
+    } else if (formType === "personalize") {
+        return (
+            <button type="submit" className={`${styles.button} ${styles[size]}`}>Start Tracking</button>
+        )}
+    else {
         return (
             <button type="submit" className={`${styles.button} ${styles[size]}`}>Submit</button>)
     }

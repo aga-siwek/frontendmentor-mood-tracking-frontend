@@ -1,0 +1,7 @@
+.today_date {
+    font-size: calc(18rem/16);
+    line-height: 120%;
+    color: #57577B;
+    text-align: center;
+}
+

@@ -1,0 +1,40 @@
+.average_mood {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: calc(8rem/16);
+    justify-content: start;
+    align-items: center;
+}
+.header_text_main {
+    color: #21214D;
+    font-weight: 600;
+    font-size: calc(20rem / 16);
+    line-height: 140%;
+}
+
+.header_text_ext {
+    color: #57577B;
+    font-size: calc(15rem / 16);
+    font-weight: normal;
+}
+
+.card {
+    background-color: #89CAFF;
+    border-radius: 20px;
+    padding: calc(20rem / 16) calc(16rem / 16);
+    height: calc(150rem/16);
+    width: 100%;
+}
+.card_body_icon {}
+.feeling_icon_svg {
+    width: 24px;
+    height: 24px;
+}
+.card_body_text {}

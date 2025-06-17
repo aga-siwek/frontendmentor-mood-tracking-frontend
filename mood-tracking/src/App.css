@@ -7,5 +7,5 @@
     gap: calc(32rem/16);
     align-items: center;
     justify-content: center;
-    padding: calc(80rem/16) calc(16rem/16);
+    padding: calc(32rem/16) calc(16rem/16);
 }

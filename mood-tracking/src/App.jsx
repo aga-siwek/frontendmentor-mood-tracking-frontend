@@ -1,41 +1,79 @@
 import './App.css'
-import Header from "./components/Header/Header.jsx";
+import HeaderLogin from "./components/Header/HeaderLogin.jsx";
+import HeaderLogout from "./components/Header/HeaderLogout.jsx";
 import Login from "./components/Login/Login.jsx";
-import {AuthProvider} from "./context/AuthContext.jsx";
-import SignUp from "./components/SignIn/SignUp.jsx";
-import Title from "./components/Title/Title.jsx";
-import TodayMood from "./components/TodayMood/TodayMood.jsx";
-import Statistics from "./components/Statistics/Statistics.jsx";
+import SignUp from "./components/SignUp/SignUp.jsx";
+import MainContent from "./components/MainContent/MainContent.jsx";
+import Personalize from "./components/Personalize/Personalize.jsx";
+import Update from "./components/Update/Update.jsx";
 import {useState} from "react";
+import {AuthProvider} from "./context/AuthContext.jsx";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 function App() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [userName, setUserName] = useState("");
+    const [feels, setFeels] = useState([
+        "Excited",
+        "Overwhelmaed"
+    ]);
+    const [mood, setMood] = useState(-2);
+    const [averageMood, setAverageMood] = useState(0);
+    const [prevAverageMood, setPrevAverageMood] = useState(0);
+    const [description, setDescription] = useState("");
+    const [sleepTime, setSleepTime] = useState("+9 hours");
+    const [averageSleepTime, setAverageSleepTime] = useState("+9 hours");
+    const [prevAverageSleepTime, setPrevAverageSleepTime] = useState(0);
+    const [sentence, setSentence] = useState("");
 
-    const handleDataChange = ({email, password }) => {
+    const handleDataChange = ({email, password}) => {
         setEmail(email)
         setPassword(password)
-        console.log("login form app")
-        console.log(email);
-        console.log(password);
-        console.log("local storage from app");
-        console.log(localStorage.getItem("token"));
     }
+
+    const handleUserNameChange = ({name}) => {
+        setUserName(name);
+    }
+
+    console.log("from app");
+
+    console.log(userName)
+
 
     return (
         <>
-            <AuthProvider>
-            <div className="container">
-                <Header/>
-                <Login email={email} password={password} handleDataChange={handleDataChange} />
-                {/*<Signup/>*/}
-                {/*<Title />*/}
-                {/*<TodayMood />*/}
-                {/*<Statistics />*/}
-            </div>
-            </AuthProvider>
-
+            <BrowserRouter>
+                <AuthProvider>
+                    <div className="container">
+                        <HeaderLogin/>
+                        {/*<HeaderLogout/>*/}
+                        <main>
+                            <Routes>
+                                <Route path="/login" element={<Login email={email} password={password}
+                                                                     handleDataChange={handleDataChange}/>}/>
+                                <Route path="/sign-up" element={<SignUp email={email} password={password}
+                                                                        handleDataChange={handleDataChange}/>}/>
+                                <Route path="/main" element={<MainContent
+                                    userName={userName}
+                                    mood={mood}
+                                    feels={feels}
+                                    sleepTime={sleepTime}
+                                    averageMood={averageMood}
+                                    averageSleepTime={averageSleepTime}
+                                    prevAverageMood = {prevAverageMood}
+                                    prevAverageSleepTime = {prevAverageSleepTime}
+                                />}/>
+                                <Route path="/personalize" element={<Personalize name={userName}
+                                                                                 handleUserNameChange={handleUserNameChange}/>}/>
+                                <Route path="/update"
+                                       element={<Update name={userName} handleUserNameChange={handleUserNameChange}/>}/>
+                            </Routes>
+                        </main>
+                    </div>
+                </AuthProvider>
+            </BrowserRouter>
         </>
     )
 }

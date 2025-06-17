@@ -13,7 +13,6 @@ function MyForm({formType, email="", password="", handleDataChange}) {
     })
 
 
-
     const handleFormSubmit = (values) => {
         if (formType === "login") {
            handleDataChange(values)
@@ -68,7 +67,7 @@ function MyForm({formType, email="", password="", handleDataChange}) {
                         <div className={styles.form_input_error}>{formik.errors.password}</div>}
                 </div>
             </div>
-            <MyButton formType="login"/>
+            <MyButton formType={formType}/>
         </form>
     )
 }
