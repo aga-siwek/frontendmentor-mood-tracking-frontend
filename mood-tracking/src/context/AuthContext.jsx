@@ -24,10 +24,6 @@ export const AuthProvider = ({children}) => {
             if (response.message !== "Login Success") {
                 throw new Error("Response error");
             }
-            console.log("After response")
-            console.log(response);
-            console.log("i am in response in authcontext")
-            console.log(response);
             setMyToken(response.access_token);
             return true
         }

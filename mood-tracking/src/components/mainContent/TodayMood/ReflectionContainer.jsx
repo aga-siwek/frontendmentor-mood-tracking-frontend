@@ -17,11 +17,8 @@ function ReflectionContainer({mood, feels}) {
         "Name it, feel it, let it pass."
     ]
     const randomNumber = Math.floor(Math.random() * 11);
-    console.log(Reflections)
     let selectReflection
     const reflectionSwitch = Reflections.map(reflection => {
-        console.log(reflection.feels.sort((a, b) => a - b));
-        console.log(feels.sort((a, b) => a - b))
         if (reflection.mood_scale === mood) {
             if ([...reflection.feels].sort((a, b) => a - b).join(",") ===
                 [...feels].sort((a, b) => a - b).join(",")) {

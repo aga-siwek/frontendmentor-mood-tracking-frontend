@@ -67,3 +67,48 @@
     width: 200px;
     height: 200px;
 }
+
+@media (min-width: 768px) {
+    .feeling_container {
+        justify-content: start;
+        align-items: start;
+
+    }
+    .feeling_content {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        overflow: hidden;
+        height: calc(300rem / 16);
+    }
+    .feeling_icon {
+        position: absolute;
+        left: 49%;
+        width: calc(319rem/16);
+        height: calc(319rem/16);
+    }
+
+    .feeling_icon_svg {
+        width: calc(319rem/16);
+        height: calc(319rem/16);
+    }
+
+
+
+}
+
+@media (min-width: 768px) {
+    .feeling_quote {
+        width: 50%;
+        align-items: start;
+    }
+}
+
+@media (min-width: 1440px) {
+    .feeling_container {
+        width: calc(670rem/16);
+    }
+
+
+}

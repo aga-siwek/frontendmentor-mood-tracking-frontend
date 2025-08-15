@@ -10,4 +10,10 @@
     background-color: #ffffff;
 }
 
+@media (min-width: 1440px) {
+    .average {
+        min-width: calc(370rem/16);
+    }
+}
+
 

@@ -1,4 +1,4 @@
-export async function apiUser ()  {
+export async function apiPutUser (userData)  {
     const URL = "http://127.0.0.1:5000/users/me"
     let token = localStorage.getItem("token")
     if (!token) {
@@ -7,10 +7,10 @@ export async function apiUser ()  {
         const response = await fetch(URL,
             {method: "PUT", headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                },});
+                    'Authorization': `Bearer ${token}`},
+                    body: JSON.stringify(userData),});
         if (response.status === 401) {
-            throw new Error("Unauthorized from ApiData");
+            throw new Error("Unauthorized from ApiPutUser");
         }
         const logsUserData = await response.json();
         console.log("logsUserData", logsUserData);
@@ -18,7 +18,7 @@ export async function apiUser ()  {
 
     }
     catch (error) {
-        console.log("error from apiUser");
+        console.log("error from apiPutUser");
         console.error(error);
     }
 }

@@ -1,0 +1,26 @@
+.statistics_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: calc(20rem / 16) calc(16rem / 16);
+    border-radius: 16px;
+    gap: calc(32rem / 16);
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.header_text {
+    color: #21214D;
+    font-weight: 600;
+    font-size: calc(28rem / 16);
+    line-height: 130%;
+    letter-spacing: -0.3px;
+}
+
+@media (min-width: 1440px) {
+    .statistics_container{
+        flex: 1;
+        width: unset;
+    }
+}

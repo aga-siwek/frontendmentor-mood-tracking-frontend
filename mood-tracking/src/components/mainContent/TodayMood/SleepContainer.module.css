@@ -31,4 +31,8 @@
     letter-spacing: -0.3px;
 }
 
-
+@media (min-width: 1440px) {
+    .sleep_container {
+        height: 100%;
+    }
+}

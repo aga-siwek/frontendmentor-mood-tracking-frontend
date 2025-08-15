@@ -5,3 +5,34 @@
     justify-content: space-between;
     width: 100%;
 }
+
+.header_avatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: calc(10rem/16);
+    cursor: pointer;
+}
+
+
+.option_window {
+    position: absolute;
+    top: 6%;
+    right: 1%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    /*transform: translateX(-110%);*/
+    /*white-space: wrap;*/
+    /*z-index: 10;*/
+    /*opacity: 0;*/
+
+    /*transition: opacity 0.3s ease;*/
+    /*max-width: calc(219rem/16) ;*/
+}
+
+.header_avatar:hover .option_window {
+    opacity: 1;
+    visibility: visible;
+}

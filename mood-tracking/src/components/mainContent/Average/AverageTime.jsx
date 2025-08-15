@@ -4,9 +4,26 @@ import equalIcon from "../../../assets/icon-trend-same-white.svg";
 import decreaseIcon from "../../../assets/icon-trend-decrease-white.svg";
 import {ReactSVG} from "react-svg";
 import sleepIcon from "../../../assets/icon-sleep-white.svg"
+import averageMood from "./AverageMood.jsx";
 
 function AverageTime({averageSleepTime, prevAverageSleepTime}) {
+
+    console.log("average time", averageSleepTime)
+    console.log("prevAverageTime", averageSleepTime)
+
+
+    const iconSwitch = () => {
+        if (averageSleepTime==="unknow") {
+            return
+        }
+        else {
+            return <ReactSVG src={sleepIcon} a lt="sleep icon" className={`${styles.sleep_icon_svg} ${addCardColor()}`}/>
+        }
+    }
+
+
     const sleepIconChange = () => {
+        if (averageSleepTime === "unknow") {return}
         if (averageSleepTime > prevAverageSleepTime) {
             return <ReactSVG src={increaseIcon} alt="increase trends icon" className={styles.card_body_icon_svg}/>
         } else if (averageSleepTime === prevAverageSleepTime) {
@@ -20,6 +37,12 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
     }
 
     const sleepTextChange = () => {
+        if (averageSleepTime === "unknow"){
+            return <p className={styles.card_body_text}>Track 5 nights to view average sleep.</p>
+        }
+        if (prevAverageSleepTime === "unknow"){
+            return <p className={styles.card_body_text}>Lack of data</p>
+        }
         if (averageSleepTime > prevAverageSleepTime) {
             return <p className={styles.card_body_text}>Increase from the previous 5 check-ins</p>
         } else if (averageSleepTime === prevAverageSleepTime) {
@@ -27,13 +50,15 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
         } else if (averageSleepTime < prevAverageSleepTime) {
             return <p className={styles.card_body_text}>Decrease from the previous 5 check-ins</p>
         } else {
-            return <p className={styles.card_body_text}>lack of data</p>
+            return <p className={styles.card_body_text}>Lack of data</p>
         }
 
     }
 
     const sleepTimeSwitch = () => {
         switch (averageSleepTime) {
+            case "unknow":
+                return <p className={styles.card_header_text}>Not enough data yet!</p>
             case 0:
                 return <p className={styles.card_header_text}>0-2 hours</p>
             case 1:
@@ -47,6 +72,23 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
         }
     }
 
+    const addCardColor = () => {
+      if (averageSleepTime === "unknow"){
+          return styles.unknow_card_color
+      }
+      else {
+          return styles.card_color
+      }
+    }
+
+    const addTextColor = () => {
+        if (averageSleepTime === "unknow"){
+            return styles.unknow_text_color
+        }
+        else {
+            return styles.text_color
+        }
+    }
 
     return (
         <div className={styles.average_time}>
@@ -54,12 +96,12 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
                 <p className={styles.header_text_main}>Average Time</p>
                 <p className={styles.header_text_ext}>(Last 5 check-ins)</p>
             </div>
-            <div className={styles.card}>
-                <div className={styles.card_header}>
-                    <ReactSVG src={sleepIcon} alt="sleep icon" className={styles.sleep_icon_svg}/>
+            <div className={`${styles.card} ${addCardColor()}`}>
+                <div className={`${styles.card_header} ${addTextColor()}`}>
+                    {iconSwitch()}
                     {sleepTimeSwitch()}
                 </div>
-                <div className={styles.card_body}>
+                <div className={`${styles.card_body} ${addTextColor()}`}>
                     {sleepIconChange()}
                     {sleepTextChange()}
                 </div>

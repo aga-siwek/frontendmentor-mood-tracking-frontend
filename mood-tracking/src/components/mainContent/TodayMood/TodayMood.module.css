@@ -2,7 +2,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: calc(20rem/16);
+    width: 100%;
+}
+
+.today_mood_components_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: calc(20rem/16);
     width: 100%;
+}
+
+@media (min-width: 1440px) {
+    .today_mood {
+        flex-direction: row;
+        align-items: revert;
+    }
+    .today_mood_components_group {
+        width: auto;
+        flex: 1;
+    }
 }

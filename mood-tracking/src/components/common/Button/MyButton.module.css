@@ -6,6 +6,13 @@
     font-weight: bold;
     line-height: 140%;
     border: 0;
-    padding: calc(12rem / 16) calc(32rem / 16);
+    padding: calc(16rem / 16) calc(32rem / 16);
+    width: 100%;
+}
 
+
+@media (min-width: 768px) {
+        .small_width {
+            width: calc(290rem / 16);
+        }
 }

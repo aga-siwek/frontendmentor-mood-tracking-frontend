@@ -1,0 +1,22 @@
+.process {
+    display: flex;
+    flex-direction: row;
+    gap: calc(16rem/16);
+
+}
+.process_stage {
+    height: calc(6rem/16);
+    background: #C7D3F7;
+    width: 100%;
+    width: 100%;
+    border-radius: 999px;
+}
+
+.active {
+    background: #4865DB;
+}
+
+.stage_one {}
+.stage_two {}
+.stage_three {}
+.stage_four {}

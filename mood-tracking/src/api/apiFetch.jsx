@@ -9,15 +9,17 @@ export async function apiFetch(url, options = {}) {
         const response = await fetch(url, {
             ...options, headers
         });
+        if (response.status === 401) {
+            throw new Error("Unauthorized");
+        }
         if (!response.ok) {
             throw new Error("Could not find a response from API");
         }
         const data = await response.json();
-        console.log("fetch data")
-        console.log(data);
         return data
     }
     catch(error){
+        console.log("error from apiFetch");
         console.error(error);
     }
 }

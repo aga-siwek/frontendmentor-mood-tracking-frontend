@@ -1,0 +1,75 @@
+.option_window {
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(12rem/16);
+    padding: calc(12rem/16) calc(16rem/16);
+    width: 100%;
+}
+
+.personal_information {
+    display: flex;
+    flex-direction: column;
+    gap: calc(2rem/16);
+}
+.personal_information_name {
+    font-size: calc(18rem/16);
+    line-height: 120%;
+    color: #21214D;
+    font-weight: 500;
+}
+
+.personal_information_email {
+    font-size: calc(15rem/16);
+    line-height: 140%;
+    letter-spacing: -0.3px;
+    color: #9393B7;
+}
+
+.line {
+    border-top: 1px solid #E0E6FA
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: calc(12rem/16);
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    gap: calc(10rem/16);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.option:hover {
+    border: 1px solid #21214D;
+    border-radius: 4px;
+    padding: 1px;
+}
+
+.option_icon {
+    width: 16px;
+    height: 16px;
+}
+
+.option_text {
+    font-size: calc(15rem/16);
+    line-height: 140%;
+    letter-spacing: -0.3px;
+    color: #21214D;
+}
+
+@media (min-width: 768px) {
+    .option_window {
+        min-width: calc(200rem/16);
+    }
+    .options {
+        justify-content: start;
+        align-items: start;
+    }
+}

@@ -6,3 +6,21 @@
     gap: calc(48rem / 16);
     width: 100%;
 }
+
+.previous_date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(48rem / 16);
+    width: 100%;
+}
+
+
+@media (min-width: 1440px) {
+    .previous_date {
+        flex-direction: row;
+        align-items: revert;
+
+    }
+}

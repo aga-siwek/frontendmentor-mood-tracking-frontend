@@ -1,5 +1,5 @@
 import styles from "./AverageMood.module.css"
-import veryHappyIcon from "../../../assets/icon-very-sad-white.svg";
+import veryHappyIcon from "../../../assets/icon-very-happy-white.svg";
 import happyIcon from "../../../assets/icon-happy-white.svg";
 import neutralIcon from "../../../assets/icon-neutral-white.svg";
 import sadIcon from "../../../assets/icon-sad-white.svg";
@@ -10,9 +10,13 @@ import equalIcon from "../../../assets/icon-trend-same.svg"
 import {ReactSVG} from "react-svg";
 
 function AverageMood({averageMood, prevAverageMood}) {
+    console.log("average mood", averageMood)
+    console.log("prevAverageMood", prevAverageMood)
 
     const iconSwitch = () => {
         switch (averageMood) {
+            case "unknow":
+                return
             case 2:
                 return <ReactSVG src={veryHappyIcon} className={styles.feeling_icon_svg} alt="Very Happy color icon"/>
             case 1:
@@ -28,6 +32,8 @@ function AverageMood({averageMood, prevAverageMood}) {
 
     const feelSwitch = () => {
         switch (averageMood) {
+            case "unknow":
+                return <p className={styles.card_header_text}>Keep tracking!</p>
             case 2:
                 return <p className={styles.card_header_text}>Very Happy</p>
             case 1:
@@ -42,6 +48,9 @@ function AverageMood({averageMood, prevAverageMood}) {
     }
 
     const feelIconChange = () => {
+        if (averageMood === "unknow") {return}
+        if (prevAverageMood === "unknow") {return <ReactSVG src={equalIcon} alt="no data" className={styles.card_body_icon_svg}/>
+        }
         if (averageMood > prevAverageMood) {
             return <ReactSVG src={increaseIcon} alt="increase trends icon" className={styles.card_body_icon_svg}/>
         } else if (averageMood === prevAverageMood) {
@@ -49,12 +58,18 @@ function AverageMood({averageMood, prevAverageMood}) {
         } else if (averageMood < prevAverageMood) {
             return <ReactSVG src={decreaseIcon} alt="decrease trends icon" className={styles.card_body_icon_svg}/>
         } else {
-            return <div>lack of data</div>
+            return <ReactSVG src={equalIcon} alt="equal trends icon" className={styles.card_body_icon_svg}/>
         }
 
     }
 
     const feelTextChange = () => {
+        if (averageMood  === "unknow"){
+            return <p className={styles.card_body_text}>Log 5 check-ins to see your average mood.</p>
+        }
+        if (prevAverageMood === "unknow"){
+            return <p className={styles.card_body_text}>Lack of data</p>
+        }
         if (averageMood > prevAverageMood) {
             return <p className={styles.card_body_text}>Increase from the previous 5 check-ins</p>
         } else if (averageMood === prevAverageMood) {
@@ -62,9 +77,26 @@ function AverageMood({averageMood, prevAverageMood}) {
         } else if (averageMood < prevAverageMood) {
             return <p className={styles.card_body_text}>Decrease from the previous 5 check-ins</p>
         } else {
-            return <p className={styles.card_body_text}>lack of data</p>
+            return <p className={styles.card_body_text}>Lack of data</p>
         }
 
+    }
+
+    const addCardColor = () => {
+        switch (averageMood) {
+            case "unknow":
+                return styles.unknow_card_color
+            case 2:
+                return styles.very_happy_card_color
+            case 1:
+                return styles.happy_card_color
+            case 0:
+                return styles.neutral_card_color
+            case -1:
+                return styles.sad_card_color
+            case -2:
+                return styles.very_sad_card_color
+        }
     }
 
     return (
@@ -73,7 +105,7 @@ function AverageMood({averageMood, prevAverageMood}) {
                 <p className={styles.header_text_main}>Average Mood</p>
                 <p className={styles.header_text_ext}>(Last 5 check-ins)</p>
             </div>
-            <div className={styles.card}>
+            <div className={`${styles.card} ${addCardColor()}`}>
                 <div className={styles.card_header}>
                     {iconSwitch()}
                     {feelSwitch()}

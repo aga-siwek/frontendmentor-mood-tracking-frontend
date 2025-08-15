@@ -32,11 +32,19 @@
     gap: calc(12rem/16);
     justify-content: start;
     align-items: start;
-    background-color:  #4865DB;
     border-radius: 20px;
     padding: calc(42rem / 16) calc(16rem / 16);
     min-height: calc(150rem/16);
     width: 100%;
+
+}
+
+.unknow_card_color {
+    background-color: #E0E6FA;
+}
+
+.card_color {
+    background-color:  #4865DB;
     background-image: url("../../../assets/bg-pattern-averages.svg");
     background-repeat: no-repeat;
     background-position: +350%
@@ -51,12 +59,20 @@
 }
 
 .card_header_text {
-    color: #FFFFFF;
     font-weight: 600;
     font-size: calc(24rem / 16);
     line-height: 140%;
 
 }
+.text_color{
+    color: #FFFFFF;
+    fill: #ffffff;
+}
+.unknow_text_color{
+    color: #21214D;
+    fill: #21214D;
+}
+
 
 .card_body {
     display: flex;
@@ -70,7 +86,6 @@
 .sleep_icon_svg {
     width: 24px;
     height: 24px;
-    fill: #ffffff;
     opacity: 70%;
 
 }
@@ -82,7 +97,6 @@
 }
 
 .card_body_text {
-    color: #ffffff;
     font-size: calc(15rem / 16);
     letter-spacing: -0.3px;
     line-height: 140%;

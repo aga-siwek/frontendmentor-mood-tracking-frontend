@@ -32,7 +32,6 @@
     gap: calc(12rem/16);
     justify-content: start;
     align-items: start;
-    background-color: #89CAFF;
     border-radius: 20px;
     padding: calc(42rem / 16) calc(16rem / 16);
     height: calc(150rem/16);
@@ -40,6 +39,30 @@
     background-image: url("../../../assets/bg-pattern-averages.svg");
     background-repeat: no-repeat;
     background-position: +350%;
+}
+
+.very_happy_card_color {
+    background-color: #FFC97C;
+}
+
+.happy_card_color {
+    background-color: #89E780;
+}
+
+.neutral_card_color {
+    background-color: #89CAFF;
+}
+
+.sad_card_color {
+    background-color: #B8B1FF;
+}
+
+.very_sad_card_color {
+    background-color: #FF9B99;
+}
+
+.unknow_card_color {
+background-color: #E0E6FA;
 }
 
 .card_header {

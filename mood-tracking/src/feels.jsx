@@ -1,0 +1,21 @@
+const feelsList = [
+    "Joyful",
+    "Down",
+    "Anxious",
+    "Calm",
+    "Excited",
+    "Lonely",
+    "Grateful",
+    "Overwhelmed",
+    "Motivated",
+    "Irritable",
+    "Peaceful",
+    "Tired",
+    "Hopeful",
+    "Confident",
+    "Stressed",
+    "Content",
+    "Disappointed",
+    "Optimistic",
+    "Restless"
+]

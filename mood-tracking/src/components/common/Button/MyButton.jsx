@@ -1,6 +1,6 @@
 import styles from "./MyButton.module.css"
 
-function MyButton({formType = "general", size="big"}) {
+function MyButton({formType = "general", size="big", onClick="none"}) {
     if (formType === "login") {
         return (
             <button
@@ -13,6 +13,18 @@ function MyButton({formType = "general", size="big"}) {
     } else if (formType === "personalize") {
         return (
             <button type="submit" className={`${styles.button} ${styles[size]}`}>Start Tracking</button>
+        )
+    }else if (formType === "continue") {
+        return (
+            <button type="submit" className={`${styles.button} ${styles[size]}`}>Continue</button>
+        )
+    } else if (formType === "submit") {
+        return (
+            <button type="submit" className={`${styles.button} ${styles[size]}`}>Start Tracking</button>
+        )}
+    else if (formType === "new log") {
+        return (
+            <button type="submit" className={`${styles.button} ${styles[size]} ${styles.small_width}`} onClick={onClick}>Log today's mood</button>
         )}
     else {
         return (
@@ -21,3 +33,5 @@ function MyButton({formType = "general", size="big"}) {
 }
 
 export default MyButton;
+
+
