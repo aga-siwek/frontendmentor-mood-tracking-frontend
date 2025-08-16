@@ -9,7 +9,6 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
     })
 
     const handleFormSubmit = (values) => {
-        console.log("add new sleep time")
         handleSleepAdd(Number(values.sleepTime))
     }
 
@@ -49,7 +48,6 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                         <label htmlFor="9+hours" className={styles.form_input_radio_text}>
                             <div className={styles.form_input_radio}></div>
                             <div className={styles.form_input_text}>9+ hours</div>
-
                         </label>
                     </div>
                 </div>
@@ -78,7 +76,6 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                     ? `${styles.form_input_element} ${styles.checked}`
                     : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
-
                         <input
                             type="radio"
                             id="6hours"
@@ -116,7 +113,6 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                         </label>
                     </div>
                 </div>
-
                 <div className={formik.values.sleepTime === "0"
                     ? `${styles.form_input_element} ${styles.checked}`
                     : `${styles.form_input_element}`}>

@@ -16,13 +16,10 @@ function MyForm({formType, email = "", password = "", handleDataChange}) {
         if (formType === "login") {
             handleDataChange(values)
         } else if (formType === "sign up") {
-            console.log("values from singup")
-            console.log(values)
             handleDataChange(values)
-            console.log("sign up");
         } else {
             console.log(formType);
-            console.log("test");
+            console.log("No form type chosen");
         }
     }
 

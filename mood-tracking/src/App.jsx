@@ -1,6 +1,4 @@
 import './App.css'
-import HeaderLogin from "./components/Header/HeaderLogin.jsx";
-import HeaderLogout from "./components/Header/HeaderLogout.jsx";
 import Login from "./components/Login/Login.jsx";
 import SignUp from "./components/SignUp/SignUp.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
@@ -17,8 +15,7 @@ import {apiPutUser} from "./api/apiPutUser.jsx";
 import {useEffect} from "react";
 import NewLog from "./components/NewLog/NewLog.jsx";
 import headerLogin from "./components/Header/HeaderLogin.jsx";
-import headerLogout from "./components/Header/HeaderLogout.jsx";
-import signUp from "./components/SignUp/SignUp.jsx";
+import headerLogout from "./components/Header/HeaderLogout.jsx";;
 import {apiPostUser} from "./api/apiPostUser.jsx";
 
 function App() {

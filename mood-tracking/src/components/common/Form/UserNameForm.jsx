@@ -9,8 +9,6 @@ function UserNameForm({name, handleUserNameChange}) {
     })
 
     const handleFormSubmit = (values) => {
-        console.log("personalize form");
-        console.log(values)
         handleUserNameChange(values)
     }
 

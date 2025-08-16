@@ -15,7 +15,6 @@ export async function apiUser ()  {
         const logsUserData = await response.json();
         console.log("logsUserData", logsUserData);
         return logsUserData;
-
     }
     catch (error) {
         console.log("error from apiUser");

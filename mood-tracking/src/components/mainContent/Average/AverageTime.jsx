@@ -4,7 +4,7 @@ import equalIcon from "../../../assets/icon-trend-same-white.svg";
 import decreaseIcon from "../../../assets/icon-trend-decrease-white.svg";
 import {ReactSVG} from "react-svg";
 import sleepIcon from "../../../assets/icon-sleep-white.svg"
-import averageMood from "./AverageMood.jsx";
+
 
 function AverageTime({averageSleepTime, prevAverageSleepTime}) {
 

@@ -11,7 +11,6 @@ export async function apiPostUser (userData)  {
         const userInfo = await response.json();
         console.log("usersdata from apiPostUser", userInfo)
         return userInfo;
-
     }
     catch (error) {
         console.log("error from apiPostUser");
