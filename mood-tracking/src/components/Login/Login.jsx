@@ -3,7 +3,6 @@ import MyForm from "../common/Form/MyForm.jsx"
 import {useContext, useEffect} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
 
-
 function Login({email, password, handleDataChange}) {
     const {addToken} = useContext(AuthContext);
 
@@ -17,12 +16,10 @@ function Login({email, password, handleDataChange}) {
                 console.log("login failed");
             }
         };
-
         if (email && password) {
             tryLogin();
         }
     }, [email, password]);
-
 
     return (
         <div className={styles.login_container}>

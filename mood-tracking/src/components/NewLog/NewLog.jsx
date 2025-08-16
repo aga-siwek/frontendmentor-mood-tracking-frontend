@@ -18,13 +18,11 @@ function NewLog({
                     handleDescriptionAdd,
                     hideLogAdd,
                     feelsList
-}) {
+                }) {
     const [processLevel, setProcessLevel] = useState(1);
 
     const changeProcessLevel = (value) => {
         setProcessLevel(value);
-        console.log("changeProcessLevel", value);
-        console.log(processLevel);
     }
     const showQuestionnaire = () => {
         if (processLevel === 1) {
@@ -38,11 +36,11 @@ function NewLog({
                 feelsList={feelsList}
                 feels={{feels}}
                 handleFeelsAdd={handleFeelsAdd}
-                changeProcessLevel={changeProcessLevel} />
+                changeProcessLevel={changeProcessLevel}/>
         }
         if (processLevel === 3) {
             return <NewDescription
-                description = {description}
+                description={description}
                 handleDescriptionAdd={handleDescriptionAdd}
                 changeProcessLevel={changeProcessLevel}/>
         }
@@ -66,7 +64,6 @@ function NewLog({
                     </div>
                 </div>
             </div>
-
         </div>)
 }
 

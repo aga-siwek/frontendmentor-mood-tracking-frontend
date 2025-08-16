@@ -29,8 +29,7 @@ function QuoteContainer({mood, feels}) {
     });
     if (selectQuote) {
         return (quoteSwitch)
-    }
-    else {
+    } else {
         return (<div className={styles.quote}><p>"{randomQuotes[randomNumber]}"</p></div>)
     }
 }

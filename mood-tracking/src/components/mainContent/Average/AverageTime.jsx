@@ -8,22 +8,19 @@ import averageMood from "./AverageMood.jsx";
 
 function AverageTime({averageSleepTime, prevAverageSleepTime}) {
 
-    console.log("average time", averageSleepTime)
-    console.log("prevAverageTime", averageSleepTime)
-
-
     const iconSwitch = () => {
-        if (averageSleepTime==="unknow") {
+        if (averageSleepTime === "unknow") {
             return
-        }
-        else {
-            return <ReactSVG src={sleepIcon} a lt="sleep icon" className={`${styles.sleep_icon_svg} ${addCardColor()}`}/>
+        } else {
+            return <ReactSVG src={sleepIcon} a lt="sleep icon"
+                             className={`${styles.sleep_icon_svg} ${addCardColor()}`}/>
         }
     }
 
-
     const sleepIconChange = () => {
-        if (averageSleepTime === "unknow") {return}
+        if (averageSleepTime === "unknow") {
+            return
+        }
         if (averageSleepTime > prevAverageSleepTime) {
             return <ReactSVG src={increaseIcon} alt="increase trends icon" className={styles.card_body_icon_svg}/>
         } else if (averageSleepTime === prevAverageSleepTime) {
@@ -33,14 +30,13 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
         } else {
             return <ReactSVG src={equalIcon} alt="equal trends icon" className={styles.card_body_icon_svg}/>
         }
-
     }
 
     const sleepTextChange = () => {
-        if (averageSleepTime === "unknow"){
+        if (averageSleepTime === "unknow") {
             return <p className={styles.card_body_text}>Track 5 nights to view average sleep.</p>
         }
-        if (prevAverageSleepTime === "unknow"){
+        if (prevAverageSleepTime === "unknow") {
             return <p className={styles.card_body_text}>Lack of data</p>
         }
         if (averageSleepTime > prevAverageSleepTime) {
@@ -52,7 +48,6 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
         } else {
             return <p className={styles.card_body_text}>Lack of data</p>
         }
-
     }
 
     const sleepTimeSwitch = () => {
@@ -73,19 +68,17 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
     }
 
     const addCardColor = () => {
-      if (averageSleepTime === "unknow"){
-          return styles.unknow_card_color
-      }
-      else {
-          return styles.card_color
-      }
+        if (averageSleepTime === "unknow") {
+            return styles.unknow_card_color
+        } else {
+            return styles.card_color
+        }
     }
 
     const addTextColor = () => {
-        if (averageSleepTime === "unknow"){
+        if (averageSleepTime === "unknow") {
             return styles.unknow_text_color
-        }
-        else {
+        } else {
             return styles.text_color
         }
     }
@@ -105,7 +98,6 @@ function AverageTime({averageSleepTime, prevAverageSleepTime}) {
                     {sleepIconChange()}
                     {sleepTextChange()}
                 </div>
-
             </div>
         </div>
     )

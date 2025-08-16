@@ -86,15 +86,14 @@ function ChartColumn({
                 <div
                     className={`${styles.column_icon} ${styles[moodClass]} ${styles.column_content} ${styles.column_info_parent}`}>
                     <ReactSVG className={styles.mood_icon} src={moodIcon} alt="mood icon"/>
-                    <div className={styles.column_info}><ColumnInfo description={description} mood={mood} feels={feels} sleepTime={sleepTime}  /></div>
+                    <div className={styles.column_info}><ColumnInfo description={description} mood={mood} feels={feels}
+                                                                    sleepTime={sleepTime}/></div>
                 </div>
-
             </div>
             <div className={styles.chart_label}>
                 <div className={styles.chart_label_month}> {showMonth()}</div>
                 <div className={styles.chart_label_day}> {showDay()}</div>
             </div>
-
         </div>
     )
 }

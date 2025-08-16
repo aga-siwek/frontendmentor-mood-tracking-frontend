@@ -29,13 +29,11 @@
         gap: calc(10rem / 16)
     }
 
-
     .title_hello {
         font-size: calc(32rem / 16);
         line-height: 140%;
         letter-spacing: -0.3px;
     }
-
 
     .title_header {
         font-size: calc(52rem / 16);
@@ -43,7 +41,6 @@
         letter-spacing: -2px;
 
     }
-
 }
 
 

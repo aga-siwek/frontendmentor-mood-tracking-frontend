@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calc(32rem/16);
+    gap: calc(32rem / 16);
     padding: calc(40rem / 16) calc(16rem / 16);
     background-color: #FFFFFF;
     border-radius: 16px;

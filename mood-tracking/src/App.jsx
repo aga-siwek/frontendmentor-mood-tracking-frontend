@@ -21,9 +21,7 @@ import headerLogout from "./components/Header/HeaderLogout.jsx";
 import signUp from "./components/SignUp/SignUp.jsx";
 import {apiPostUser} from "./api/apiPostUser.jsx";
 
-
 function App() {
-
     const feelsList = [
         "Joyful",
         "Down",
@@ -74,9 +72,6 @@ function App() {
     const handleSignUp = useCallback(({email, password}) => {
         setEmail(email)
         setPassword(password)
-        console.log("start handleSignup")
-        console.log(email)
-        console.log(password)
         const userData =
             {
                 "user_email": email,
@@ -91,8 +86,6 @@ function App() {
         setEmail(email)
         setPassword(password)
         const loggedUser = await apiUser()
-        console.log("logged user from handle Login")
-        console.log(loggedUser)
         if (loggedUser) {
             if (!loggedUser.user_name) {
                 navigate("/personalize");
@@ -110,7 +103,6 @@ function App() {
         navigate("/login")
         localStorage.removeItem("token");
         localStorage.removeItem("userName");
-
     }
 
     const handleSettingNavigate = () => {
@@ -131,25 +123,15 @@ function App() {
     })
 
     const handleAverageMoodChange = useCallback(() => {
-        console.log("start handle average mood change")
         let average = 0
         let prevAverage = 0
-
         if (logs) {
-            console.log("handleAverageMoodChange logs", logs.length)
             if (logs.length <= 5) {
-                console.log("start logs <= 5")
-                // logs.map(log => {
-                //     average += log.mood.mood_scale
-
-                // })
                 setAverageMood("unknow")
                 setPrevAverageMood("unknow")
                 return
             }
-
             if (logs.length >= 10) {
-                console.log("start logs > 10")
                 const lastLogs = logs.slice(-5)
                 const prevLogs = logs.slice(-10, -5)
                 lastLogs.map(log => {
@@ -160,15 +142,8 @@ function App() {
                     prevAverage += log.mood.mood_scale
                 })
                 setPrevAverageMood(Math.round(prevAverage / prevLogs.length))
-                console.log("start lastlogs")
-                console.log(lastLogs)
-                console.log(average)
-                console.log("start prevLogs")
-                console.log(prevLogs)
-                console.log(prevAverage)
                 return;
             }
-            console.log("start handleAverageMoodChange else")
             const lastLogs = logs.slice(-5)
             lastLogs.map(log => {
                 average += log.mood.mood_scale
@@ -181,9 +156,7 @@ function App() {
     const handleAverageSleepChange = useCallback(() => {
         let average = 0
         let prevAverage = 0
-
         if (logs) {
-            console.log("logs lenght from handle average sleep change", logs.length)
             if (logs.length <= 5) {
                 setAverageSleepTime("unknow")
                 setPrevAverageSleepTime("unknow")
@@ -202,14 +175,12 @@ function App() {
                 setPrevAverageSleepTime(Math.round(prevAverage / prevLogs.length))
                 return;
             }
-
             const lastLogs = logs.slice(-5)
             lastLogs.map(log => {
                 average += log.sleep.sleep_time_scale
             })
             setAverageSleepTime(Math.round(average / lastLogs.length))
             setPrevAverageSleepTime("unknow")
-
         }
     })
 
@@ -247,7 +218,6 @@ function App() {
         setLogAddIsOpen(false)
     }
 
-
     useEffect(() => {
         const downloadData = async () => {
             const token = localStorage.getItem("token");
@@ -258,15 +228,8 @@ function App() {
             const data = await apiData();
             setLogs(data);
         };
-
         downloadData();
     }, []);
-
-
-    console.log("logs from app")
-    console.log(logs);
-    console.log("token from app")
-    console.log(token)
 
     useEffect(() => {
         if (logs) {
@@ -280,17 +243,6 @@ function App() {
                 lastLogsFullInfo.map(feel => lastFeels.push(feel.feel_name
                 ))
                 setFeels(lastFeels)
-                console.log("lastfeels from use effect")
-                console.log(lastFeels)
-                console.log("feels from use effect")
-                console.log(feels)
-                console.log("mood from use effect")
-                console.log(mood)
-                console.log("description from use effect")
-                console.log(description)
-                console.log("sleep time from use effect")
-                console.log(sleepTime)
-
             }
         }
     }, [logs])
@@ -312,7 +264,6 @@ function App() {
                         <Route path="/sign-up" element={
                             <div className="container_site">
                                 <MemoHeaderLogout/>
-
                                 <MemoSignUp
                                     email={email}
                                     password={password}
@@ -322,7 +273,7 @@ function App() {
                             <div className="container_site">
                                 <MemoHeaderLogin
                                     handleLogout={handleLogout}
-                                    handleSettingNavigate={handleSettingNavigate} />
+                                    handleSettingNavigate={handleSettingNavigate}/>
                                 <MemoMainContent
                                     userName={userName}
                                     mood={mood}
@@ -338,7 +289,6 @@ function App() {
                                     addedToday={addedToday}
                                     checkTodayLog={checkTodayLog}
                                     showLogAdd={showLogAdd}
-
                                 />
                             </div>}/>
                         <Route path="/personalize"
@@ -376,7 +326,6 @@ function App() {
                     </div>
                 </div>
             </AuthProvider>
-
         </>
     )
 }

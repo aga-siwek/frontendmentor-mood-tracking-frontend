@@ -34,7 +34,6 @@ function MainContent({
 
     const todayDate = new Date()
 
-
     let lastLog
     if (logs) {
         if (logs.length > 0) {
@@ -52,11 +51,8 @@ function MainContent({
                     Number(todayDate.getMonth() + 1) == Number(lastLog.created_at_month) &&
                     Number(todayDate.getFullYear()) == Number(lastLog.created_at_year)
                 ) {
-                    console.log("after if in main")
                     checkTodayLog(true)
-
                 } else {
-                    console.log("not today date")
                     checkTodayLog(false)
                 }
             }
@@ -85,7 +81,6 @@ function MainContent({
                 <Statistics logs={logs}/>
             </div>
         </div>
-
     )
 }
 

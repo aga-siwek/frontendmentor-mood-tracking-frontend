@@ -19,7 +19,7 @@
 }
 
 @media (min-width: 1440px) {
-    .statistics_container{
+    .statistics_container {
         flex: 1;
         width: unset;
     }

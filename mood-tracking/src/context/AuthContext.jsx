@@ -8,30 +8,29 @@ export const AuthProvider = ({children}) => {
     useEffect(() => {
         if (myToken) {
             localStorage.setItem("token", myToken);
-        }
-        else {
+        } else {
             localStorage.removeItem("token");
         }
     }, [myToken])
 
-    async function addToken (loginInput){
+    async function addToken(loginInput) {
         try {
             const response = await apiFetch("http://127.0.0.1:5000/login/", {
-                method: 'POST',
-                body: JSON.stringify(loginInput),
+                    method: 'POST',
+                    body: JSON.stringify(loginInput),
                 }
-                );
+            );
             if (response.message !== "Login Success") {
                 throw new Error("Response error");
             }
             setMyToken(response.access_token);
             return true
-        }
-        catch (error) {
+        } catch (error) {
             console.error("Login error", error);
             return false
         }
     }
+
     const removeToken = () => {
         setMyToken(null)
     };

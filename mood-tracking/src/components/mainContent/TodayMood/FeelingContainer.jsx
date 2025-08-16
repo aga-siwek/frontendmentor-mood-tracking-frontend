@@ -9,7 +9,6 @@ import verySad from "../../../assets/icon-very-sad-color.svg"
 import QuoteContainer from "./QuoteContainer.jsx";
 
 function FeelingContainer({mood, feels}) {
-
     const iconSwitch = () => {
         switch (mood) {
             case 2:
@@ -24,7 +23,6 @@ function FeelingContainer({mood, feels}) {
                 return <ReactSVG src={verySad} className={styles.feeling_icon_svg} alt="Very Sad color icon"/>
         }
     }
-
     const feelSwitch = () => {
         switch (mood) {
             case 2:
@@ -39,6 +37,7 @@ function FeelingContainer({mood, feels}) {
                 return "Very Sad"
         }
     }
+
     return (
         <div className={styles.feeling_container}>
             <div className={styles.feeling_content}>
@@ -55,7 +54,6 @@ function FeelingContainer({mood, feels}) {
                     <QuoteContainer mood={mood} feels={feels}/>
                 </div>
             </div>
-
         </div>
     )
 }

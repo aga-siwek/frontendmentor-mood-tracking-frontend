@@ -4,7 +4,7 @@ import MyButton from "../Button/MyButton.jsx"
 import * as Yup from "yup";
 
 
-function MyForm({formType, email="", password="", handleDataChange}) {
+function MyForm({formType, email = "", password = "", handleDataChange}) {
     const validationSchema = Yup.object({
         email: Yup.string().email().required("Email is required"),
         password: Yup.string()
@@ -12,10 +12,9 @@ function MyForm({formType, email="", password="", handleDataChange}) {
             .required("password must be at least 6 characters"),
     })
 
-
     const handleFormSubmit = (values) => {
         if (formType === "login") {
-           handleDataChange(values)
+            handleDataChange(values)
         } else if (formType === "sign up") {
             console.log("values from singup")
             console.log(values)
@@ -38,7 +37,6 @@ function MyForm({formType, email="", password="", handleDataChange}) {
             },
         }
     )
-
 
     return (
         <form className={styles.form} onSubmit={formik.handleSubmit}>

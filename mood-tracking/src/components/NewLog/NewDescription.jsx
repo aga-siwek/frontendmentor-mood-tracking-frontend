@@ -32,14 +32,13 @@ function NewDescription({description, handleDescriptionAdd, changeProcessLevel})
         }
     )
 
-
     return (
         <form className={styles.new_container} onSubmit={formik.handleSubmit}>
-                <div className={styles.new_title}>
-                    <p>Write about your day...</p>
-                </div>
-                <div className={styles.questionnaire}>
-                    <div className={styles.questionnaire_textarea}>
+            <div className={styles.new_title}>
+                <p>Write about your day...</p>
+            </div>
+            <div className={styles.questionnaire}>
+                <div className={styles.questionnaire_textarea}>
                         <textarea
                             name="description"
                             placeholder="Today, I felt…"
@@ -51,12 +50,12 @@ function NewDescription({description, handleDescriptionAdd, changeProcessLevel})
                             }}
                             onBlur={formik.handleBlur}
                             className={styles.form_input}/>
-                        <div className={styles.questionnaire_textarea_counter}>{`${counter}/150`}</div>
-                        {formik.errors.description && formik.touched.description &&
-                            <div className={styles.form_input_error}>{formik.errors.description}</div>}
-                    </div>
-                    <MyButton formType="continue"/>
+                    <div className={styles.questionnaire_textarea_counter}>{`${counter}/150`}</div>
+                    {formik.errors.description && formik.touched.description &&
+                        <div className={styles.form_input_error}>{formik.errors.description}</div>}
                 </div>
+                <MyButton formType="continue"/>
+            </div>
         </form>
 
     )

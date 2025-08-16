@@ -23,6 +23,7 @@
     line-height: 140%;
     letter-spacing: -0.3px;
 }
+
 .form_input_text {
     padding: calc(12rem / 16) calc(16rem / 16);
     border: 1px solid #9393B7;
@@ -39,8 +40,9 @@
 
 @media (min-width: 768px) {
     .form {
-        width: calc(530rem/16);
+        width: calc(530rem / 16);
     }
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+}

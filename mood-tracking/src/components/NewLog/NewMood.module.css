@@ -5,7 +5,6 @@
     justify-content: start;
     gap: calc(24rem / 16);
     width: 100%;
-
 }
 
 .new_title {
@@ -51,12 +50,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .form_input_radio {
     height: 20px;
     width: 20px;
     border: solid 1.5px #C7D3F7;
     border-radius: 999px;
-
 }
 
 .form_input:checked + .form_input_radio_text .form_input_radio {

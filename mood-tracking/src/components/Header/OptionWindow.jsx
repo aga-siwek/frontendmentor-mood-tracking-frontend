@@ -3,12 +3,13 @@ import {ReactSVG} from "react-svg";
 import iconSetting from "../../assets/icon-settings.svg"
 import iconLogOut from "../../assets/icon-logout.svg"
 
-function OptionWindow ({
-
-                           handleLogout,
-                           handleSettingNavigate}) {
+function OptionWindow({
+                          handleLogout,
+                          handleSettingNavigate
+                      }) {
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");
+
     return (
         <div className={styles.option_window}>
             <div className={styles.personal_information}>
@@ -19,7 +20,7 @@ function OptionWindow ({
             <div className={styles.options}>
 
                 <div className={styles.option} onClick={handleSettingNavigate}>
-                    <ReactSVG src={iconSetting} alt="setting icon" className={styles.option_icon} />
+                    <ReactSVG src={iconSetting} alt="setting icon" className={styles.option_icon}/>
                     <p className={styles.option_text}>Setting</p>
                 </div>
                 <div className={styles.option} onClick={handleLogout}>
@@ -30,4 +31,5 @@ function OptionWindow ({
         </div>
     )
 }
+
 export default OptionWindow;

@@ -3,7 +3,6 @@ import MyButton from "../Button/MyButton.jsx";
 import {useFormik} from 'formik';
 import * as Yup from "yup";
 
-
 function UserNameForm({name, handleUserNameChange}) {
     const validationSchema = Yup.object({
         name: Yup.string(),
@@ -13,7 +12,6 @@ function UserNameForm({name, handleUserNameChange}) {
         console.log("personalize form");
         console.log(values)
         handleUserNameChange(values)
-
     }
 
     const formik = useFormik({

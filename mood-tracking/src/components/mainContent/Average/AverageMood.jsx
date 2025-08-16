@@ -10,8 +10,6 @@ import equalIcon from "../../../assets/icon-trend-same.svg"
 import {ReactSVG} from "react-svg";
 
 function AverageMood({averageMood, prevAverageMood}) {
-    console.log("average mood", averageMood)
-    console.log("prevAverageMood", prevAverageMood)
 
     const iconSwitch = () => {
         switch (averageMood) {
@@ -48,8 +46,11 @@ function AverageMood({averageMood, prevAverageMood}) {
     }
 
     const feelIconChange = () => {
-        if (averageMood === "unknow") {return}
-        if (prevAverageMood === "unknow") {return <ReactSVG src={equalIcon} alt="no data" className={styles.card_body_icon_svg}/>
+        if (averageMood === "unknow") {
+            return
+        }
+        if (prevAverageMood === "unknow") {
+            return <ReactSVG src={equalIcon} alt="no data" className={styles.card_body_icon_svg}/>
         }
         if (averageMood > prevAverageMood) {
             return <ReactSVG src={increaseIcon} alt="increase trends icon" className={styles.card_body_icon_svg}/>
@@ -60,14 +61,13 @@ function AverageMood({averageMood, prevAverageMood}) {
         } else {
             return <ReactSVG src={equalIcon} alt="equal trends icon" className={styles.card_body_icon_svg}/>
         }
-
     }
 
     const feelTextChange = () => {
-        if (averageMood  === "unknow"){
+        if (averageMood === "unknow") {
             return <p className={styles.card_body_text}>Log 5 check-ins to see your average mood.</p>
         }
-        if (prevAverageMood === "unknow"){
+        if (prevAverageMood === "unknow") {
             return <p className={styles.card_body_text}>Lack of data</p>
         }
         if (averageMood > prevAverageMood) {
@@ -79,7 +79,6 @@ function AverageMood({averageMood, prevAverageMood}) {
         } else {
             return <p className={styles.card_body_text}>Lack of data</p>
         }
-
     }
 
     const addCardColor = () => {

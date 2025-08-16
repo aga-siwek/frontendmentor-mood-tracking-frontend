@@ -29,6 +29,7 @@ function NewFeels({feelsList, feels, handleFeelsAdd, changeProcessLevel}) {
             },
         }
     )
+
     return (
         <div className={styles.new_container}>
             <div className={styles.new_title}>
@@ -69,7 +70,6 @@ function NewFeels({feelsList, feels, handleFeelsAdd, changeProcessLevel}) {
                             </label>
                         </div>
                     ))}
-
                 </div>
                 {formik.errors.feels && formik.touched.feels &&
                     <div className={styles.form_input_error}>{formik.errors.feels}</div>}

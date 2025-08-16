@@ -11,10 +11,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: calc(10rem/16);
+    gap: calc(10rem / 16);
     cursor: pointer;
 }
-
 
 .option_window {
     position: absolute;
@@ -23,13 +22,6 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     visibility: hidden;
-    /*transform: translateX(-110%);*/
-    /*white-space: wrap;*/
-    /*z-index: 10;*/
-    /*opacity: 0;*/
-
-    /*transition: opacity 0.3s ease;*/
-    /*max-width: calc(219rem/16) ;*/
 }
 
 .header_avatar:hover .option_window {

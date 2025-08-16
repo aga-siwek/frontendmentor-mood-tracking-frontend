@@ -12,25 +12,33 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: calc(24rem/16);
+    gap: calc(24rem / 16);
 }
+
 .close {
- display: none;
+    display: none;
 }
+
 .main_title {
-    font-size: calc(32rem/16);
+    font-size: calc(32rem / 16);
     font-weight: bold;
     line-height: 120%;
     letter-spacing: -0.3px;
     color: #21214D
 }
-.main_process {}
-.new_log {}
+
+.main_process {
+}
+
+.new_log {
+}
 
 @media (min-width: 768px) {
     .new_log_container {
-        padding: calc(48rem/16) calc(40rem/16);
+        padding: calc(48rem / 16) calc(40rem / 16);
+        width: calc(600rem / 16);
     }
+
     .content {
         width: 100%;
     }

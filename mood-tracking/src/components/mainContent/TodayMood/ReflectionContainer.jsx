@@ -27,7 +27,7 @@ function ReflectionContainer({mood, feels}) {
                     <div className={styles.reflection_container}>
                         <div>
                             <div className={styles.reflection_header}>
-                                <ReactSVG src={refIcon} className={styles.reflection_icon} />
+                                <ReactSVG src={refIcon} className={styles.reflection_icon}/>
                                 <p className={styles.reflection_header_text}>Reflection of the day</p>
                             </div>
                             <div className={styles.reflection_text}><p> {selectReflection}</p></div>
@@ -50,10 +50,10 @@ function ReflectionContainer({mood, feels}) {
                     </div>
                     <div className={styles.reflection_text}><p> {randomReflections[randomNumber]}</p></div>
                 </div>
-                <div className={styles.reflection_hashes}>{feels.map(feel=>
+                <div className={styles.reflection_hashes}>{feels.map(feel =>
                     <p className={styles.reflection_hash} key={feel}>#{feel}</p>)}</div>
             </div>
-    )
+        )
     }
 }
 

@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     gap: calc(16rem/16);
-
 }
 .process_stage {
     height: calc(6rem/16);

@@ -51,6 +51,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .form_input_radio {
     height: 20px;
     width: 20px;
@@ -80,8 +81,5 @@
     width: 38px;
 }
 
-.new_log {
-
-}
 
 

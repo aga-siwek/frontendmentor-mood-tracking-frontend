@@ -3,16 +3,18 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: calc(12rem/16);
+    gap: calc(12rem / 16);
     width: 100%;
 }
+
 .header {
     display: flex;
     flex-direction: row;
-    gap: calc(8rem/16);
+    gap: calc(8rem / 16);
     justify-content: start;
     align-items: center;
 }
+
 .header_text_main {
     color: #21214D;
     font-weight: 600;
@@ -29,12 +31,12 @@
 .card {
     display: flex;
     flex-direction: column;
-    gap: calc(12rem/16);
+    gap: calc(12rem / 16);
     justify-content: start;
     align-items: start;
     border-radius: 20px;
     padding: calc(42rem / 16) calc(16rem / 16);
-    height: calc(150rem/16);
+    height: calc(150rem / 16);
     width: 100%;
     background-image: url("../../../assets/bg-pattern-averages.svg");
     background-repeat: no-repeat;
@@ -62,7 +64,7 @@
 }
 
 .unknow_card_color {
-background-color: #E0E6FA;
+    background-color: #E0E6FA;
 }
 
 .card_header {
@@ -70,7 +72,7 @@ background-color: #E0E6FA;
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: calc(12rem/16);
+    gap: calc(12rem / 16);
 }
 
 .card_header_text {
@@ -78,7 +80,6 @@ background-color: #E0E6FA;
     font-weight: 600;
     font-size: calc(24rem / 16);
     line-height: 140%;
-
 }
 
 .card_body {
@@ -86,13 +87,15 @@ background-color: #E0E6FA;
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: calc(8rem/16);
+    gap: calc(8rem / 16);
 }
-.card_body_icon {}
+
+.card_body_icon {
+}
+
 .feeling_icon_svg {
     width: 24px;
     height: 24px;
-
 }
 
 .card_body_icon_svg {

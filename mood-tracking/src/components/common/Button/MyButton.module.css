@@ -10,9 +10,8 @@
     width: 100%;
 }
 
-
 @media (min-width: 768px) {
-        .small_width {
-            width: calc(290rem / 16);
-        }
+    .small_width {
+        width: calc(290rem / 16);
+    }
 }

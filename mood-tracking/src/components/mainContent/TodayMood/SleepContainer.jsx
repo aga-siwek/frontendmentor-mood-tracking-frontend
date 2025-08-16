@@ -2,7 +2,7 @@ import styles from "./SleepContainer.module.css"
 import {ReactSVG} from "react-svg";
 import sleepIcon from "../../../assets/icon-sleep.svg"
 
-function SleepContainer ({sleepTime}) {
+function SleepContainer({sleepTime}) {
     const sleepTimeSwitch = () => {
         switch (sleepTime) {
             case 0:
@@ -24,9 +24,8 @@ function SleepContainer ({sleepTime}) {
                 <p className={styles.sleep_header_text}>Sleep</p>
             </div>
             <div className={styles.sleep_time}>{sleepTimeSwitch()}</div>
-
-
         </div>
     )
 }
+
 export default SleepContainer;

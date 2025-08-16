@@ -1,6 +1,7 @@
 import styles from "./SignUp.module.css"
 import MyForm from "../common/Form/MyForm.jsx";
-function SignUp ({email, password, handleDataChange, }) {
+
+function SignUp({email, password, handleDataChange,}) {
     return (
         <div className={styles.sign_up_container}>
             <div className={styles.sign_up}>
@@ -16,4 +17,5 @@ function SignUp ({email, password, handleDataChange, }) {
         </div>
     )
 }
+
 export default SignUp;

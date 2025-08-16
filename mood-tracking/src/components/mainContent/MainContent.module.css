@@ -16,11 +16,9 @@
     width: 100%;
 }
 
-
 @media (min-width: 1440px) {
     .previous_date {
         flex-direction: row;
         align-items: revert;
-
     }
 }

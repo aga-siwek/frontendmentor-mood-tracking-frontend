@@ -32,9 +32,9 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
             </div>
 
             <div className={styles.questionnaire}>
-                <div className={formik.values.sleepTime==="4"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.sleepTime === "4"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"
@@ -53,9 +53,9 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                         </label>
                     </div>
                 </div>
-                <div className={formik.values.sleepTime==="3"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.sleepTime === "3"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"
@@ -74,9 +74,9 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                     </div>
                 </div>
 
-                <div className={formik.values.sleepTime==="2"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.sleepTime === "2"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
 
                         <input
@@ -95,9 +95,9 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                         </label>
                     </div>
                 </div>
-                <div className={formik.values.sleepTime==="1"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.sleepTime === "1"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"
@@ -117,9 +117,9 @@ function NewSleepTime({sleepTime, handleSleepAdd, changeProcessLevel}) {
                     </div>
                 </div>
 
-                <div className={formik.values.sleepTime==="0"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.sleepTime === "0"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"

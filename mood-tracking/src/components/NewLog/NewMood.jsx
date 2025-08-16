@@ -40,9 +40,9 @@ function NewMood({mood, handleMoodAdd, changeProcessLevel}) {
             </div>
 
             <div className={styles.questionnaire}>
-                <div className={formik.values.mood==="veryHappy"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.mood === "veryHappy"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"
@@ -62,9 +62,9 @@ function NewMood({mood, handleMoodAdd, changeProcessLevel}) {
                     </div>
                     <div><ReactSVG className={styles.moodIcon} src={veryHappyIcon} alt="very happy icon"/></div>
                 </div>
-                <div className={formik.values.mood==="happy"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.mood === "happy"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"
@@ -84,9 +84,9 @@ function NewMood({mood, handleMoodAdd, changeProcessLevel}) {
                     <ReactSVG className={styles.moodIcon} src={HappyIcon} alt="Happy icon"/>
                 </div>
 
-                <div className={formik.values.mood==="neutral"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.mood === "neutral"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
 
                         <input
@@ -106,9 +106,9 @@ function NewMood({mood, handleMoodAdd, changeProcessLevel}) {
                     </div>
                     <ReactSVG className={styles.moodIcon} src={neutralIcon} alt="neutral icon"/>
                 </div>
-                <div className={formik.values.mood==="sad"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.mood === "sad"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"
@@ -129,9 +129,9 @@ function NewMood({mood, handleMoodAdd, changeProcessLevel}) {
                     <ReactSVG className={styles.moodIcon} src={sadIcon} alt="sad icon"/>
                 </div>
 
-                <div className={formik.values.mood==="verySad"
-                    ?`${styles.form_input_element} ${styles.checked}`
-                    :`${styles.form_input_element}`}>
+                <div className={formik.values.mood === "verySad"
+                    ? `${styles.form_input_element} ${styles.checked}`
+                    : `${styles.form_input_element}`}>
                     <div className={styles.input_name}>
                         <input
                             type="radio"

@@ -6,7 +6,6 @@ function ColumnInfo({
                         feels = ["a",],
                         sleepTime = "unknow"
                     }) {
-    console.log("feels from column info", feels)
 
     const moodSwitch = () => {
         switch (mood) {
@@ -22,7 +21,6 @@ function ColumnInfo({
                 return <p className={styles.column_info_body_big}>Very Happy</p>
         }
     }
-
 
     const timeSwitch = () => {
         switch (sleepTime) {
@@ -47,21 +45,19 @@ function ColumnInfo({
                     <div className={styles.column_info_body_big}>{moodSwitch()}</div>
                 </div>
             </div>
-
             <div className={styles.column_info_container}>
                 <p className={styles.column_info_header}>Sleep</p>
                 <div className={styles.column_info_body_big}>{timeSwitch()}</div>
             </div>
-
             <div className={styles.column_info_container}>
                 <p className={styles.column_info_header}>Reflection</p>
                 <div className={styles.column_info_body_small}>{description}</div>
             </div>
-
             <div className={styles.column_info_container}>
                 <p className={styles.column_info_header}>Tags</p>
                 <div className={styles.column_info_feels_content}>
-                    {feels.map((feel, index) => <div key={feel + index} className={styles.column_info_body_small}>{feel.feel_name}</div>)}
+                    {feels.map((feel, index) => <div key={feel + index}
+                                                     className={styles.column_info_body_small}>{feel.feel_name}</div>)}
                 </div>
             </div>
         </div>

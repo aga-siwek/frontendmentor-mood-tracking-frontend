@@ -2,7 +2,7 @@ import styles from "./Chart.module.css"
 import ChartColumn from "./ChartColumn.jsx";
 import {ReactSVG} from "react-svg";
 import sleepIcon from "../../../assets/icon-sleep.svg"
-import { useEffect, useRef } from "react";
+import {useEffect, useRef} from "react";
 
 
 function Chart({logs}) {
@@ -44,7 +44,6 @@ function Chart({logs}) {
                     feels={feels}
                     sleepTime={sleepTime}/>
             })
-
         }
     }
 
@@ -72,12 +71,10 @@ function Chart({logs}) {
                         <ReactSVG src={sleepIcon} alt="Sleep icon" className={styles.chart_label_y_icon}/>
                         <p className={styles.chart_label_y_text}>0-2 hours</p>
                     </div>
-
                 </div>
-                <div className={styles.chart_statistic}  ref={chartRef}>
+                <div className={styles.chart_statistic} ref={chartRef}>
                     <div className={styles.chart}>
                         {showLog()}
-
                     </div>
                 </div>
             </div>
