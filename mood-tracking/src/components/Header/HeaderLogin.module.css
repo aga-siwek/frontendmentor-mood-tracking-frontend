@@ -28,3 +28,10 @@
     opacity: 1;
     visibility: visible;
 }
+
+@media (min-width: 1440px) {
+    .option_window {
+        right: auto;
+        top: 10%
+    }
+}
